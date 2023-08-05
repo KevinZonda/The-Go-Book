@@ -1,0 +1,30 @@
+package node
+
+type Node struct {
+	// TODO: 完成Node的结构体
+}
+
+// NewLinkedListNode 创建一个新的链表节点
+func NewLinkedListNode(val string) *Node {
+	// TODO: 在这里完成代码
+}
+
+// Value 获得当前节点的值
+func (l *Node) Value() string {
+	// TODO: 在这里完成代码
+}
+
+// SetValue 设置节点值
+func (l *Node) SetValue(v string) {
+	// TODO：在这里完成代码
+}
+
+// Next 下一个节点
+func (l *Node) Next() *Node {
+	// TODO：在这里完成代码
+}
+
+// SetNext 设置下一个节点
+func (l *Node) SetNext(n *Node) {
+	// TODO：在这里完成代码
+}
