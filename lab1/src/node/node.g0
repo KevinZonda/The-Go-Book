@@ -7,11 +7,13 @@ type Node struct {
 // NewLinkedListNode 创建一个新的链表节点
 func NewLinkedListNode(val string) *Node {
 	// TODO: 在这里完成代码
+	return nil
 }
 
 // Value 获得当前节点的值
 func (l *Node) Value() string {
 	// TODO: 在这里完成代码
+	return ""
 }
 
 // SetValue 设置节点值
@@ -22,9 +24,20 @@ func (l *Node) SetValue(v string) {
 // Next 下一个节点
 func (l *Node) Next() *Node {
 	// TODO：在这里完成代码
+	return nil
 }
 
 // SetNext 设置下一个节点
 func (l *Node) SetNext(n *Node) {
 	// TODO：在这里完成代码
+}
+
+// Length 获得当前 Node 有多少个尾巴
+// [1] -> Nil: 1
+// [1] -> [2] -> [3] -> Nil: 3
+// Nil: 0
+func (l *Node) Length() int {
+	// TODO：在这里完成代码
+	return 0
+
 }

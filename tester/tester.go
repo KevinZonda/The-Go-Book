@@ -30,3 +30,8 @@ func RunTestNodes(tests []TestNode) {
 		RunTest(test.Func)
 	}
 }
+
+func F(s string) bool {
+	fmt.Println(s)
+	return false
+}

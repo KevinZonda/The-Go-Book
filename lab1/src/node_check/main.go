@@ -9,6 +9,7 @@ func main() {
 	tester.RunTestNodes([]tester.TestNode{
 		{Name: "NewNode", Func: newNode},
 		{Name: "SetNext", Func: setNext},
+		{Name: "Count", Func: count},
 	})
 }
 
@@ -31,4 +32,16 @@ func setNext() bool {
 		hw += _n.Value()
 	}
 	return hw == "HelloWorld"
+}
+
+func count() bool {
+	head := node.NewLinkedListNode("Hello")
+	if head.Length() != 1 {
+		return tester.F("1 nodes, failed")
+	}
+	head.SetNext(node.NewLinkedListNode("World"))
+	if head.Length() != 2 {
+		return tester.F("2 nodes, failed")
+	}
+	return true
 }

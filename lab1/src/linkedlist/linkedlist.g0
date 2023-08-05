@@ -1,0 +1,33 @@
+package linkedlist
+
+import (
+	"github.com/KevinZonda/The-Go-Book/lab1/src/node"
+)
+
+type LinkedList struct {
+	head *node.Node
+}
+
+func NewLinkedList(head *node.Node) *LinkedList {
+	return &LinkedList{head: head}
+}
+
+func (l *LinkedList) Head() *node.Node {
+	return l.head
+}
+
+// Add 新增一个节点到链表
+func (l *LinkedList) Add(val string) {
+	// TODO：在这里完成代码
+}
+
+// Has 检查这个链表是否存在节点拥有值
+func (l *LinkedList) Has(val string) bool {
+	// TODO：在这里完成代码
+	return false
+}
+
+// Remove 移除全部包含val的节点
+func (l *LinkedList) Remove(val string) {
+	// TODO：在这里完成代码
+}
