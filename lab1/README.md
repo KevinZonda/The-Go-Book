@@ -20,4 +20,76 @@
 
 ## 0x02 实验内容
 
-### 节点
+### 1. 节点（Node）
+
+> task_id: node  
+> file: [src/node/node.g0](src/node/node.g0)
+> 
+> 请完成 `src/node/node.g0` 中的代码，使得 `Node` 能够通过测试。
+
+
+链表的节点使用 `Node` 结构体来表示，它包含了两个字段：
+- val 表示值
+- next 表示下一个节点
+
+其用 Graph 图来表示为
+
+```
++------+           +------+
+| Node |    +----> | Node |
++------+    |      +------+
+| val  |    |      | val  |
+| next +----+      | next +----> Nil
++------+           +------+
+```
+
+当 Next 为空指针时，我们会发现其为结尾，否之则不是。
+
+### 2. 链表（LinkedList）
+
+> task_id: linkedlist  
+> file: [src/linkedlist/linkedlist.g0](src/linkedlist/linkedlist.g0)
+
+链表是对节点（Node）的高级封装，其支持了增删查改等操作。我们的练习会关注于增删查操作。
+
+#### 增（Add）
+
+链表的增有很多种，我们只关注一种：
+
+考虑一个链表：
+
+```
+{a} -> [b] -> [c] -> nil
+{} 表示 LinkedList 的 Head Node
+[] 表示 Node
+```
+
+如果我们需要增加节点 d，我们可以：
+
+```
+CREATE [d]
+MAKE [d] -> {a}
+// 那么现在变成了 [d] -> {a} -> [b] -> [c] -> nil
+MAKE {d} -> [a] -> [b] -> [c] -> nil
+```
+
+### 查（Has）
+
+链表的查询依赖于迭代，尝试使用上面的例子来思考。
+
+### 删（Remove）
+
+去删除 节点 b
+```
+{d} -> [a] -> [b] -> [c] -> nil
+
+FIND [b] and its prev.
+prev := [a]
+current := [b]
+prev.next = current.next
+          +-----------+
+          |           v
+{d} -> [a]+   [b] -> [c] -> nil
+        ^      ^
+      prev     current
+```
