@@ -5,7 +5,7 @@
 - Go 语言基础
   - struct 定义
   - func 的定义及使用
-  - func 的 Reciever 相关
+  - func 的 Receiver 相关
 - Go 语言指针基础
   - nil 指针
   - 指针的使用
